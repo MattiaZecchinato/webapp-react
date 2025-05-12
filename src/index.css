@@ -1,0 +1,20 @@
+/******** 
+reset 
+********/
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/******** 
+Header 
+********/
+header {
+
+    background-color: #ffe4c4;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
