@@ -4,7 +4,7 @@ import NavBar from "./NavBar";
 export default function Header() {
 
     return <header>
-            <NavLink><img src="" alt="logo" /></NavLink>
+            <NavLink to='/'><img src="logo.jpg" alt="logo" /></NavLink>
             <NavBar />
     </header>
 }
