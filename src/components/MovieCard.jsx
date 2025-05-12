@@ -1,6 +1,6 @@
 import { NavLink } from "react-router";
 
-export default function MovieCard({ id, title, director }) {
+export default function MovieCard({ id, title, director, year }) {
 
     const linkMovieDetails = `/${id}`;
 
@@ -12,7 +12,7 @@ export default function MovieCard({ id, title, director }) {
             <div className="details-box">
                 <p>{title}</p>
                 <p>{director}</p>
-                <p>Release year</p>
+                <p>{year}</p>
                 <NavLink to={linkMovieDetails}>See More</NavLink>
             </div>
         </div>
