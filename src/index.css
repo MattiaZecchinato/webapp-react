@@ -42,10 +42,22 @@ Common
     text-align: center;
 }
 
+/******** 
+Pages 
+********/
+
+/**** HomePage ****/
+.movies-box {
+
+    display: flex;
+    flex-wrap: wrap;
+}
 
 /******** 
-Header 
+Components 
 ********/
+
+/**** Header ****/
 header {
 
     background-color: #ffe4c4;

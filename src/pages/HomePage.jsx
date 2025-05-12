@@ -5,6 +5,8 @@ export default function HomePage() {
 
     return <>
         <h1>Movies List</h1>
-        {moviesList.map(movie => <MovieCard id={movie.id} title={movie.title} director={movie.director} />)}
+        <div className='movies-box'>
+            {moviesList.map(movie => <MovieCard id={movie.id} title={movie.title} director={movie.director} />)}
+        </div>
     </>
 }
