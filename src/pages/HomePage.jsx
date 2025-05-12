@@ -1,4 +1,4 @@
-import moviesList from '../../data/moviesDemo.json';
+import moviesList from '../data/moviesDemo.json';
 import MovieCard from '../components/MovieCard';
 
 export default function HomePage() {

@@ -1,8 +1,8 @@
 import {BrowserRouter, Routes, Route } from 'react-router';
 
-import MainLayout from './assets/layouts/MainLayout';
-import HomePage from './assets/pages/HomePage';
-import MovieDetails from './assets/pages/MovieDetails';
+import MainLayout from './layouts/MainLayout';
+import HomePage from './pages/HomePage';
+import MovieDetails from './pages/MovieDetails';
 
 
 export default function App() {
