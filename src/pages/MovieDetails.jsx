@@ -1,33 +1,43 @@
 import { useParams } from "react-router";
-import { useContext } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
-//context
-import MovieContext from "../contexts/MovieContext";
+import MovieDetailsCard from "../components/MovieDetailsCard";
+import ReviewCard from "../components/ReviewCard";
 
 export default function MovieDetails() {
 
         const { id } = useParams();
 
-        const movies = useContext(MovieContext);
+        const [movie, setMovie] = useState([]);
 
-        const currentMovie = movies.find(movie => movie.id === parseInt(id));
+        const uri = `http://127.0.0.1:3000/movies/${id}`
 
-        console.log(currentMovie);
+        function getMovie() {
+
+            axios.get(uri)
+                .then(res => {
+                    console.log(res.data);
+                    setMovie(res.data);
+                })
+                .catch(err => console.log(err))
+        }
+
+        useEffect(getMovie, []);
 
     return <>
-        <div className="box-det">
-            <h1>{currentMovie.title}</h1>
-            <div className="movie-box-det">
-                <div className="img-box-det">
-                    <img src={currentMovie.imagePath} alt={currentMovie.title} />
-                </div>
-                <div className="details-box-det">
-                    <p>Director: {currentMovie.director}</p>
-                    <p>Genre: {currentMovie.genre}</p>
-                    <p>Year: {currentMovie.release_year}</p>
-                    <p>Description: {currentMovie.abstract}</p>
-                    <p>Average vote: {currentMovie.avg_vote}</p>
-                </div>
+        <div className="movie-det-container">
+
+            <MovieDetailsCard movie={movie}/>
+
+            <hr />
+            
+            <div className="heading-reviews">
+                <h2>Our community reviews</h2>
+                <p>Average: {movie.avg_vote}</p>
+            </div>
+            <div className="box-reviews">
+                {movie.reviews?.map(rev => <ReviewCard key={rev.id} name={rev.name} text={rev.text} vote={rev.vote} />)}
             </div>
         </div>
     </>
