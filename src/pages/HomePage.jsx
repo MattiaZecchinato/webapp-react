@@ -12,7 +12,7 @@ export default function HomePage() {
     return <>
         <h1>Movies List</h1>
         <div className='movies-box'>
-            {moviesList.map(movie => <MovieCard key={movie.id} id={movie.id} title={movie.title} director={movie.director} year={movie.release_year} />)}
+            {moviesList.map(movie => <MovieCard key={movie.id} id={movie.id} title={movie.title} director={movie.director} year={movie.release_year} image={movie.imagePath} />)}
         </div>
     </>
 }
