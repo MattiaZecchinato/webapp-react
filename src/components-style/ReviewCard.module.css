@@ -1,0 +1,22 @@
+:root {
+
+    --primary-color: #808080;
+}
+
+.reviewBox {
+
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 15px 10px;
+    margin-bottom: 20px;
+}
+
+.bodyBox {
+
+    margin-bottom: 10px;
+}
+
+.infoBox span {
+
+    font-weight: bold;
+}
