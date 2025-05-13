@@ -1,15 +1,17 @@
 import { NavLink } from "react-router";
 
-export default function MovieCard({ id, title, director, year }) {
+import style from '../components-style/MovieCard.module.css';
+
+export default function MovieCard({ id, title, director, year, image }) {
 
     const linkMovieDetails = `/${id}`;
 
     return <>
-        <div className="card">
-            <div className="img-box">
-                <img src="" alt="movies" />
+        <div className={style.card}>
+            <div className={style.imgBox}>
+                <img src={image} alt={title} className={style.img} />
             </div>
-            <div className="details-box">
+            <div className={style.detailsBox}>
                 <p>{title}</p>
                 <p>{director}</p>
                 <p>{year}</p>
