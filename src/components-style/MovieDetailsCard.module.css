@@ -1,0 +1,32 @@
+.boxDet {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.movieBoxDet {
+
+    display: flex;
+    gap: 20px;
+}
+
+.imgBoxDet {
+
+    width: 200px;
+    height: 250px;
+}
+
+.imgBoxDet img {
+
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.detailsBoxDet p {
+    
+    text-wrap: wrap;
+}
