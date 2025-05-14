@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 import MovieDetailsCard from "../components/MovieDetailsCard";
 import ReviewCard from "../components/ReviewCard";
+import FormReview from "../components/FormReview";
 
 export default function MovieDetails() {
 
@@ -38,6 +39,9 @@ export default function MovieDetails() {
             </div>
             <div className="box-reviews">
                 {movie.reviews?.map(rev => <ReviewCard key={rev.id} name={rev.name} text={rev.text} vote={rev.vote} />)}
+            </div>
+            <div className="box-form">
+                <FormReview uri={uri}/>
             </div>
         </div>
     </>
