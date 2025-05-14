@@ -1,3 +1,8 @@
+:root {
+
+    --padding-x: 100px;
+}
+
 /******** 
 reset 
 ********/
@@ -17,16 +22,22 @@ Pages
 ********/
 
 /**** HomePage ****/
+.home-page-box {
+
+    padding: 20px var(--padding-x);
+}
+
 .movies-box {
 
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 /**** MovieDetails ****/
 .movie-det-container {
 
-    padding: 20px 100px;
+    padding: 20px var(--padding-x);
 }
 
 .movie-det-container hr {
