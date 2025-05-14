@@ -10,9 +10,11 @@ export default function HomePage() {
     const moviesList = useContext(MovieContext);
 
     return <>
-        <h1>Movies List</h1>
-        <div className='movies-box'>
-            {moviesList.map(movie => <MovieCard key={movie.id} id={movie.id} title={movie.title} director={movie.director} year={movie.release_year} image={movie.imagePath} />)}
+        <div className='home-page-box'>
+            <h1>Movies List</h1>
+            <div className='movies-box'>
+                {moviesList.map(movie => <MovieCard key={movie.id} movie={movie}/>)}
+            </div>
         </div>
     </>
 }
