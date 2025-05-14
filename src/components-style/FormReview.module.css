@@ -1,0 +1,31 @@
+.headingForm {
+
+    margin-bottom: 15px;
+}
+
+form {
+
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+
+    margin-bottom: 5px;
+}
+
+form input, textarea {
+
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+button {
+
+    align-self: flex-end;
+    padding: 10px;
+    background-color: rgb(49, 94, 167);
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
