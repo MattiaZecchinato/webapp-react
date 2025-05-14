@@ -5,13 +5,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 200px;
+    width: calc((100% - 60px) / 3);
+    padding: 10px 20px;
 }
 
 .imgBox {
 
-    width: 100px;
-    height: 150px;
+    width: 200px;
+    height: 300px;
 }
 
 .imgBox img {
@@ -22,7 +23,12 @@
     object-fit: cover;
 }
 
-.detailsBox {
+.detailsBox * {
 
-    text-align: center;
+    margin-bottom: 10px;
+}
+
+.detailsBox span {
+
+    font-weight: bold;
 }
