@@ -1,6 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
 
+//style
+import style from '../components-style/FormReview.module.css';
+
 export default function FormReview({ uri }) {
 
     const resetForm = {
@@ -42,7 +45,7 @@ export default function FormReview({ uri }) {
     }
 
     return <>
-        <h2>Add your review</h2>
+        <h2 className={style.headingForm}>Add your review</h2>
         <form onSubmit={sendForm}>
             <label htmlFor="name">Name</label>
             <input type="text" name="name" value={form.name} onChange={addDataForm} required />
