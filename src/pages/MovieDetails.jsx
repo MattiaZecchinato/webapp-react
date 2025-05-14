@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import MovieDetailsCard from "../components/MovieDetailsCard";
 import ReviewCard from "../components/ReviewCard";
 import FormReview from "../components/FormReview";
+import RatingStars from "../components/RatingStars";
 
 export default function MovieDetails() {
 
@@ -35,7 +36,7 @@ export default function MovieDetails() {
             
             <div className="heading-reviews">
                 <h2>Our community reviews</h2>
-                <p>Average: {movie.avg_vote}</p>
+                <p>Average: <RatingStars vote={movie.avg_vote} /></p>
             </div>
             <div className="box-reviews">
                 {movie.reviews?.map(rev => <ReviewCard key={rev.id} name={rev.name} text={rev.text} vote={rev.vote} />)}
